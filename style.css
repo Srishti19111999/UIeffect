@@ -1,0 +1,101 @@
+body{
+  padding: 0px;
+  margin: 0px;
+  background: #161623;
+  display:flex;
+  align-items: center;
+  justify-content: center;
+}
+.circle1{
+  height: 70px;
+  width: 70px; 
+  border-radius: 50%;
+  position: absolute;
+  top: 31em;
+  right: 54em;
+  background: linear-gradient(to top right, #cc0099 0%, #3333cc 100%);
+  opacity: 0.7;
+}
+
+.circle2{
+  height: 100px;
+  width: 100px; 
+  border-radius: 50%;
+  position: absolute;
+  top: 2.4em;
+  right: 24em;
+  background: linear-gradient(to bottom right, #cc0066 0%, #ffccff 100%);opacity: 0.5;
+}
+body::before{
+  content: '';
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top:0;
+  left: 0;
+  background: linear-gradient( #3399ff 30%, #ff3399 100%);
+  clip-path: circle(28% at 85% 75%);
+}
+body::after{
+  content: '';
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top:0;
+  left: 0;
+  background: linear-gradient(#6df8da 0%, #053986 100%);
+  clip-path: circle(18% at 10% 15%);
+}
+
+
+.container{
+  position: absolute;
+  top: 6em;
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+  flex-wrap: wrap;
+}
+.container .card{
+  background:rgba(255, 255, 255, 0.1);
+  width: 280px;
+  height: 420px;
+  margin-left: 3em;
+  margin-right: 3em;
+  border-radius: 25px;
+  box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.5);
+  border-top: 2px solid rgba(255, 255, 255, 0.5);
+  border-left: 2px solid rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(15px);
+}
+.container .card .content{
+  padding: 20px;
+  text-align: center;
+  transform: translateY(25px);
+  opacity: 0.3;
+  transition: 0.5s;
+
+}
+.container .card .content:hover{
+  opacity: 1;
+  transform: translateY(0px);
+  
+}
+.container .card .content h2{
+  font-size: 5.5em;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.3);
+  margin-bottom: -10px;
+  margin-top: -5px;
+}
+.container .card .content h3{
+  font-size: 35px;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 1);
+}
+.container .card .content p{
+  font-size: 18px;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.8);
+}
